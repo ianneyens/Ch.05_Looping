@@ -14,7 +14,7 @@ tails = 0
 
 for i in range(50):
     N = random.randrange(2)
-    if N == 0:
+    if N == 1:
         print("Heads")
         heads += 1
     else:
