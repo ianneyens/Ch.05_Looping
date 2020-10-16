@@ -17,53 +17,60 @@ wins = 0
 losses = 0
 done = False
 while not done:
-    num = random.randint(1, 3)
-    x = float(input("1 = rock  2 = paper  3 = scissors  4 = quit :"))
+    num = float(input("1 = rock  2 = paper  3 = scissors  4 = quit :"))
     if num == 1:
-        print("rock")
-        if x == 1:
-            print("Tie game")
+        rock = random.randint(1, 3)
+        if rock == 1:
+            print("Rock, we tied")
             print(wins, "-", losses)
-        elif x == 2:
-            print("You win")
-            wins += 1
-            print(wins, "-", losses)
-        elif x == 3:
-            print("You lose")
+            print()
+        elif rock == 2:
+            print("Paper, you lose")
             losses += 1
             print(wins, "-", losses)
+            print()
         else:
-            done = True
+            print("Scissors, you win")
+            wins += 1
             print(wins, "-", losses)
+            print()
     elif num == 2:
-        print("paper")
-        if x == 1:
-            print("You win")
+        paper = random.randint(1, 3)
+        if paper == 1:
+            print("Rock, you win")
             wins += 1
             print(wins, "-", losses)
-        elif x == 2:
-            print("Tie game")
+            print()
+        elif paper == 2:
+            print("Paper, we tied")
             print(wins, "-", losses)
-        elif x == 3:
-            print("You lose")
+            print()
+        else:
+            print("Scissors, you lose")
             losses += 1
             print(wins, "-", losses)
-        else:
-            done = True
-            print(wins, "-", losses)
+            print()
     elif num == 3:
-        print("scissors")
-        if x == 1:
-            print("You lose")
+        scissors = random.randint(1, 3)
+        if scissors == 1:
+            print("Rock, you lose")
             losses += 1
             print(wins, "-", losses)
-        elif x == 2:
-            print("You win")
+            print()
+        elif scissors == 2:
+            print("Paper, you win")
             wins += 1
             print(wins, "-", losses)
-        elif x == 3:
-            print("Tie game")
-            print(wins, "-", losses)
+            print()
         else:
-            done = True
+            print("Scissors, we tied")
             print(wins, "-", losses)
+            print()
+    else:
+        if wins > losses:
+            print("You won", wins, "-", losses)
+        elif wins < losses:
+            print("You lost", wins, "-", losses)
+        else:
+            print("We tied", wins, "-", losses)
+        done = True

@@ -13,8 +13,8 @@ heads = 0
 tails = 0
 
 for i in range(50):
-    N = random.randrange(2)
-    if N == 1:
+    HT = random.randrange(2)
+    if HT == 1:
         print("Heads")
         heads += 1
     else:
