@@ -21,7 +21,7 @@ while not done:
     if num == 1:
         rock = random.randint(1, 3)
         if rock == 1:
-            print("Rock, we tied")
+            print("Rock, tie")
             print(wins, "-", losses)
             print()
         elif rock == 2:
@@ -42,7 +42,7 @@ while not done:
             print(wins, "-", losses)
             print()
         elif paper == 2:
-            print("Paper, we tied")
+            print("Paper, tie")
             print(wins, "-", losses)
             print()
         else:
@@ -63,10 +63,10 @@ while not done:
             print(wins, "-", losses)
             print()
         else:
-            print("Scissors, we tied")
+            print("Scissors, tie")
             print(wins, "-", losses)
             print()
-    else:
+    elif num == 4:
         if wins > losses:
             print("You won", wins, "-", losses)
         elif wins < losses:
@@ -74,3 +74,5 @@ while not done:
         else:
             print("We tied", wins, "-", losses)
         done = True
+    else:
+        done = False
