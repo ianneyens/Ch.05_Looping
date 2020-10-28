@@ -17,8 +17,8 @@ wins = 0
 losses = 0
 done = False
 while not done:
-    num = float(input("1 = rock  2 = paper  3 = scissors  4 = quit :"))
-    if num == 1:
+    num = input("1 = rock  2 = paper  3 = scissors  4 = quit :")
+    if num == "1":
         rock = random.randint(1, 3)
         if rock == 1:
             print("Rock, tie")
@@ -34,9 +34,9 @@ while not done:
             wins += 1
             print(wins, "-", losses)
             print()
-    elif num == 2:
+    elif num == "2":
         paper = random.randint(1, 3)
-        if paper == 1:
+        if paper == 2:
             print("Rock, you win")
             wins += 1
             print(wins, "-", losses)
@@ -50,7 +50,7 @@ while not done:
             losses += 1
             print(wins, "-", losses)
             print()
-    elif num == 3:
+    elif num == "3":
         scissors = random.randint(1, 3)
         if scissors == 1:
             print("Rock, you lose")
@@ -66,7 +66,7 @@ while not done:
             print("Scissors, tie")
             print(wins, "-", losses)
             print()
-    elif num == 4:
+    elif num == "4":
         if wins > losses:
             print("You won", wins, "-", losses)
         elif wins < losses:
