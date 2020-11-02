@@ -66,8 +66,8 @@ while not done:
         print(miles_traveled)
         print(canteen)
     elif user_input == "6":                                     # Quit
-        done = True
         print("Quitter")
+        break
     else:
         done = False
 
