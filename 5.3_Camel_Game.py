@@ -76,6 +76,7 @@ while not done:
         break
     else:
         done = False
+        print()
 
     if miles_traveled >= 200:
         print("Congratulations, you won!")
