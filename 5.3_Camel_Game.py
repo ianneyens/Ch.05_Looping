@@ -54,7 +54,7 @@ while not done:
         camel_tired = random.randint(1, 3)
         camel += camel_tired
         miles_traveled += miles
-        natives_traveled = random.randint(12, 17)
+        natives_traveled = random.randint(12, 18)
         natives += natives_traveled
         print("You have travelled", miles_traveled, "miles")
         print("The natives are", miles_traveled - natives, "miles behind")
