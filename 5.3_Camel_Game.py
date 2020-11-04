@@ -7,7 +7,7 @@ The pseudo-code for how to code this game is in Chapter 5 of the Python Jedi boo
 import random
 done = False
 
-canteen = 3
+canteen = 4
 camel = 0
 thirst = 0
 miles_traveled = 0
@@ -46,6 +46,7 @@ while not done:
         miles_traveled += miles
         natives += natives_traveled
         print("You have travelled", miles_traveled, "miles")
+        print("The natives are", miles_traveled-natives, "miles behind")
         print()
     elif user_input == "3":                                     # ahead full speed
         miles = random.randint(10, 20)
@@ -56,15 +57,20 @@ while not done:
         natives_traveled = random.randint(12, 17)
         natives += natives_traveled
         print("You have travelled", miles_traveled, "miles")
+        print("The natives are", miles_traveled - natives, "miles behind")
         print()
     elif user_input == "4":                                     # Stop for the night
         camel = 0
         natives_traveled = random.randint(7, 15)
         natives += natives_traveled
         print("Your camel thanks you")
+        print("The natives are", miles_traveled - natives, "miles behind")
+        print()
     elif user_input == "5":                                     # Status check
         print(miles_traveled)
         print(canteen)
+        print("The natives are", miles_traveled - natives, "miles behind")
+        print()
     elif user_input == "6":                                     # Quit
         print("Quitter")
         break
