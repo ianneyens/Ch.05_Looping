@@ -1,4 +1,4 @@
-'''
+"""
 ROSHAMBO PROGRAM
 ----------------
 
@@ -9,7 +9,7 @@ Add to the program so it first asks the user their choice as well as if they wan
 Add conditional statements to figure out who wins and keep the records
 When the user quits print a win/loss record
 
-'''
+"""
 
 import random
 
